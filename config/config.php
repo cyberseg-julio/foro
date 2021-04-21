@@ -8,4 +8,4 @@ define ("DB_NAME", "forum");
 define("SITE_TITLE", "Bienvenido al foro!");
 
 //Paths
-define('BASE_URI','http://prodseg:8000/foro/');
+define('BASE_URI','https://prodseg:3000/foro/');
