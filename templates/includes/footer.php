@@ -19,11 +19,11 @@
                             <form role="form" method="post" action="login.php">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input name="username" type="text" class="form-control" placeholder="Introduce el Username" />
+                                    <input name="username" type="text" class="form-control" autocomplete="off" placeholder="Introduce el Username" />
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input name="password" type="password" class="form-control" placeholder="password" />
+                                    <input name="password" type="password" class="form-control" autocomplete="off" placeholder="password" />
                                 </div>
                                 <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a class="btn btn-default" href="register.php">Crear Cuenta</a>
                             </form>
