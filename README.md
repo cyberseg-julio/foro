@@ -40,9 +40,9 @@ Con esto tenemos configurado el proyecto Inicial
 ## Componentes de software
 <details>
 <summary><b>Componentes de software :octocat:</b></summary>
-First Header | Second Header
------------- | -------------
-ckeditor4 | [https://github.com/ckeditor/ckeditor4](https://github.com/ckeditor/ckeditor4)
-bootstrap | [https://getbootstrap.com](https://getbootstrap.com/)
-jquery | [https://jquery.com](https://jquery.com)
+First Header | Second Header|
+------------ | -------------|
+ckeditor4 | [https://github.com/ckeditor/ckeditor4](https://github.com/ckeditor/ckeditor4) |
+bootstrap | [https://getbootstrap.com](https://getbootstrap.com/) |
+jquery | [https://jquery.com](https://jquery.com) |
 </details>
