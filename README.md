@@ -41,7 +41,7 @@ Con esto tenemos configurado el proyecto Inicial
 <details>
 <summary><b>Componentes de software :octocat:</b></summary>
 
-First Header | Second Header                         |
+Componente   | Web                                   |
 ------------ | --------------------------------------|
 ckeditor4    | https://github.com/ckeditor/ckeditor4 |
 bootstrap    | https://getbootstrap.com              |
