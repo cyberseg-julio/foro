@@ -21,8 +21,7 @@ h3{
 
 /* Navbar Customization */
 .navbar{
-    height: 40px !important;
-    background: #5c5b69;
+    background: #5c5b69 !important;
     border: 0;
     margin-bottom: 30px;
 }
@@ -33,7 +32,7 @@ h3{
     background: none !important;
 }
 .navbar-brand{
-    padding: 10px 0 0 0;
+    padding: 0 0 0 1em;
     color:#fff;
 }
 .navbar-nav > li > a {

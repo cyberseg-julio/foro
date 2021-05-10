@@ -12,7 +12,7 @@
     <link href="<?php echo BASE_URI; ?>templates/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URI; ?>templates/css/custom.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="<?php echo BASE_URI; ?>templates/js/bootstrap.js"></script>
     <script src="<?php echo BASE_URI; ?>templates/js/ckeditor/ckeditor.js"></script>
       
@@ -22,40 +22,43 @@
         $title = SITE_TITLE;
       }
       ?>
-
   </head>
 
   <body>
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="index.php">Foro Ligeramente Vulnerable</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">Foro Ligeramente Vulnerable</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.php">Home</a></li>
-            <?php if(!isLoggedIn()) : ?>
-                <li><a href="register.php">Crear Cuenta</a></li>
-            <?php else : ?>
-                <li><a href="create.php">Crear Topic</a></li>
-		<?php if(isAdmin()) : ?>
-		<li><a href="admin.php">Administracion</a></li>
-		<?php endif; ?>
-            <?php endif; ?>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home</a>
+      </li>
+      <?php if(!isLoggedIn()) : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">Crear Cuenta</a>
+      </li>
+      <?php else : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="create.php">Crear Topic</a>
+      </li>
+      <?php if(isAdmin()) : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="admin.php">Administracion</a>
+      </li>
+		  <?php endif; ?>
+      <?php endif; ?>
+    </ul>
+  </div>
+  </div>
+</nav>
+</div>
 
     <div class="container">
-
         <div class="row">
             <div class="col-md-8">
                 <div class="main-col">
