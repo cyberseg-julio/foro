@@ -41,10 +41,12 @@ Con esto tenemos configurado el proyecto Inicial
 <details>
 <summary><b>Componentes de software :octocat:</b></summary>
 
-Componente   | Web                                   |
------------- | --------------------------------------|
-ckeditor4    | https://github.com/ckeditor/ckeditor4 |
-bootstrap    | https://getbootstrap.com              |
-jquery       | https://jquery.com                    |
+Componente   | Web                                                            |
+------------ | ---------------------------------------------------------------|
+bootstrap    | https://getbootstrap.com                                       |
+ckeditor4    | https://github.com/ckeditor/ckeditor4                          |
+jquery       | https://jquery.com                                             |
+acme font    | https://fonts.google.com/specimen/Acme                         |
+captcha      | https://www.phpflow.com/php/how-to-add-capcha-on-your-website/ |
 
 </details>
