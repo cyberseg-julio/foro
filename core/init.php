@@ -1,6 +1,9 @@
 <?php 
 //Start Session
-session_start();
+session_start([
+    'cookie_httponly' => true,
+    'cookie_secure' => true
+]);
 
 //Include Configuration
 require_once('config/config.php');
