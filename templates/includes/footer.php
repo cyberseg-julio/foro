@@ -13,7 +13,7 @@
                             </div>
                             <br />
                             <form role="form" method="post" action="logout.php">
-                                <input type="submit" name="do_logout" class="btn btn-default" value="Log Out" />
+                                <input type="submit" name="do_logout" class="btn btn-primary" value="Log Out" />
                             </form>
                         <?php else : ?>
                             <form role="form" method="post" action="login.php">
@@ -25,7 +25,7 @@
                                     <label>Password</label>
                                     <input name="password" type="password" class="form-control" autocomplete="off" placeholder="password" />
                                 </div>
-                                <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a class="btn btn-default" href="register.php">Crear Cuenta</a>
+                                <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a class="btn btn-primary" href="register.php">Crear Cuenta</a>
                             </form>
                         <?php endif; ?>
                     </div>

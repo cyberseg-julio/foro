@@ -47,7 +47,7 @@
             <textarea id="reply" rows="10" cols="80" class="form-control" name="body"></textarea>
             <script>CKEDITOR.replace('reply');</script>
         </div>
-        <button name="do_reply" type="submit" class="btn btn-default">Reply</button>
+        <button name="do_reply" type="submit" class="btn btn-primary">Reply</button>
     </form>
 <?php else : ?>
     <p>Please Login to Reply</p>

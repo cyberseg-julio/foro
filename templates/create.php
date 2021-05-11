@@ -23,7 +23,7 @@
                                 <img src="captcha.php" alt="captcha-image" class="captcha-image"></div>
                                 <div class="col-sm-7 pull-right"><input type="text" name="captcha" size="3" maxlength="3" class="form-control"><a class="refresh-captcha" href="">Refrescar Captcha</a></div>
                             </div>
-                            <button type="submit" class="btn btn-default" name="do_create">Submit</button>
+                            <button type="submit" class="btn btn-primary" name="do_create">Submit</button>
                             <?php 
                                 if(isset($_POST["captcha"]))  
                                 if($_SESSION["captcha"]==$_POST["captcha"])  
