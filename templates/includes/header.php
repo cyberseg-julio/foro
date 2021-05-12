@@ -63,7 +63,7 @@
             <div class="col-md-8">
                 <div class="main-col">
                     <div class="block">
-                    <h1 class="pull-left"><?php echo $title; ?></h1>
+                    <h3 class="pull-left"><?php echo $title; ?></h3>
                     <h4 class="pull-right">Un Motor de Foros Vulnerables</h4>
                         <div class="clearfix"></div>
                         <hr />
