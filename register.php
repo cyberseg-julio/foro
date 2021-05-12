@@ -27,23 +27,23 @@ if(isset($_POST['register'])){
                 if ($user->uploadAvatar()){
                     $data['avatar'] = $_FILES["avatar"]["name"];
                 } else {
-                    $data['avatar'] = 'noimage.png';
+                    $data['avatar'] = 'indice.png';
                 }
 
                 //Register User
                 if($user->register($data)){
-                    redirect('index.php', 'You are registered and can now log in','success');
+                    redirect('index.php', 'Registro Completado','success');
                 } else {
-                    redirect('register.php', 'Something went wrong with registration','error');
+                    redirect('register.php', 'Fallo en el Registro','error');
                 }
             } else {
-                redirect('register.php',"Your Passwords do not match.",'error');
+                redirect('register.php',"Las Contraseñas no coinciden.",'error');
             }
         } else {
-            redirect('register.php',"Use a valid email address.",'error');
+            redirect('register.php',"Usa un email válido.",'error');
         }
     } else {
-        redirect('register.php',"Please fill in All required fields",'error');
+        redirect('register.php',"Complete todos los campos necesarios",'error');
     }
     
 

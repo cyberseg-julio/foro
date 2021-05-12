@@ -12,21 +12,27 @@ if(isset($_POST['do_reply'])){
     $data=array();
     $data['topic_id'] = $topic_id;
     $data['body'] = $_POST['body'];
+    $data['captcha'] = $_POST['captcha'];
     $data['user_id'] = getUser()['user_id'];
     
     //Create Validator Object
     $validate = new Validator;
     //Required Fields
-    $field_array = array('body');
-    
-    if($validate->isRequired($field_array)){
-        if($topic->reply($data)){
-            redirect('topic.php?id='.$topic_id,'Your reply has been posted','success');
+    $field_array = array('body', 'captcha');
+    if($validate->isRequired($field_array))
+    {
+        if($validate->captchaOK())
+        {
+            if($topic->reply($data)){
+                redirect('topic.php?id='.$topic_id,'Respuesta Publicada','success');
+            } else {
+                redirect('topic.php?id='.$topic_id,'Respuesta no publicada, error','error');
+            }
         } else {
-            redirect('topic.php?id='.$topic_id,'Reply not posted. Something went wrong','error');
+            redirect('topic.php?id='.$topic_id,'Error de Captcha','error');
         }
     } else {
-        redirect('topic.php?id='.$topic_id,'Reply not posted. Message must not be empty','error');
+        redirect('topic.php?id='.$topic_id,'Respuesta sin publicar. Complete todos los campos','error');
     }
 }
 

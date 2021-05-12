@@ -26,5 +26,16 @@ class Validator{
         }
         return false;
     }
+
+    //Check Captcha
+    public function captchaOK(){
+        if(isset($_POST["captcha"])) {
+            if($_SESSION["captcha"]==$_POST["captcha"])  
+            {
+            return true;  
+            }  
+        }
+        return false;     
+    }
 }
 ?>

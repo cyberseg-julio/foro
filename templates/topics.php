@@ -23,7 +23,7 @@
 <?php endforeach; ?>
 </ul>
 <?php else : ?>
-    <p>No Topics to Display.</p>
+    <p>No hay posts que mostrar.</p>
 <?php endif; ?>
 
 

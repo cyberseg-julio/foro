@@ -18,7 +18,7 @@ $template->totalCategories = $topic->getTotalCategories();
 
 if (isset($category)){
     $template->topics = $topic->getByCategory($category);
-    $template->title = 'Posts in "'.$topic->getCategory($category)['name'].'"';
+    $template->title = 'Posts sobre "'.$topic->getCategory($category)['name'].'"';
 } 
 if (isset($user_id)){
     $template->topics = $topic->getByUser($user_id);
