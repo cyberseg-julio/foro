@@ -53,7 +53,9 @@ class User {
     
     //User login 
     public function login($username,$password){
-        $this->db->query("select * from users where username ='" . $username . "' and password = '" . $password . "'");
+        $this->db->query('select * from users where username = :username and password = :password');
+        $this->db->bind(':username',$username);
+        $this->db->bind(':password',$password);
         $result = $this->db->single();
         //check result
         if($this->db->rowCount()>0){
