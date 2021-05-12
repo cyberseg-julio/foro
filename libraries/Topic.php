@@ -33,7 +33,7 @@ class Topic {
     
     //Get by Category
     public function getByCategory($category_id){
-        $this->db->query('select topics.*, categories.*, users.username from topics
+        $this->db->query('select topics.*, categories.*, users.username, users.avatar from topics
         inner join categories on topics.category_id=categories.id
         inner join users on topics.user_id=users.id
         where topics.category_id = :category_id');
