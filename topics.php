@@ -17,12 +17,21 @@ $template->totalTopics = $topic->getTotalTopics();
 $template->totalCategories = $topic->getTotalCategories();
 
 if (isset($category)){
-    $template->topics = $topic->getByCategory($category);
-    $template->title = 'Posts sobre "'.$topic->getCategory($category)['name'].'"';
+    if (!preg_match ("/^[0-9]*$/", $category) ){  
+        redirect('index.php', 'Path Trasversal Fail', 'error');
+    } else {  
+        $template->topics = $topic->getByCategory($category);
+        $template->title = 'Posts sobre "'.$topic->getCategory($category)['name'].'"'; 
+    }
 } 
 if (isset($user_id)){
-    $template->topics = $topic->getByUser($user_id);
-    //$template->title = 'Posts by "'.$user->getUser($user_id)['name'].'"';
+    if (!preg_match ("/^[0-9]*$/", $user_id) ){  
+        redirect('index.php', 'Path Trasversal Fail', 'error');
+    } else {  
+        $template->topics = $topic->getByUser($user_id);
+        //$template->title = 'Posts by "'.$user->getUser($user_id)['name'].'"'; 
+    }  
+
 } 
 
 if (!isset($category) && !isset($user_id)) {
