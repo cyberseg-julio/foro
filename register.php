@@ -8,12 +8,24 @@ $user = new User;
 $validate = new Validator;
 
 if(isset($_POST['register'])){
+    $username = $_POST['username'];
+    $username = trim($username);
+    $username = stripslashes($username);
+    $username = htmlspecialchars($username);
+    $password = $_POST['password'];
+    $password = trim($password);
+    $password = stripslashes($password);
+    $password = htmlspecialchars($password);
+    $password2 = $_POST['password2'];
+    $password2 = trim($password2);
+    $password2 = stripslashes($password2);
+    $password2 = htmlspecialchars($password2);
     $data = array();
     $data['name'] = $_POST['name'];
     $data['email'] = $_POST['email'];
-    $data['username'] = $_POST['username'];
-    $data['password'] = $_POST['password'];
-    $data['password2'] = $_POST['password2'];
+    $data['username'] = $username;
+    $data['password'] = $password;
+    $data['password2'] = $password2;
     $data['about'] = $_POST['about'];
     $data['last_activity'] = date("Y-m-d H:i:s");
     
